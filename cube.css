@@ -1,0 +1,83 @@
+body  {
+    background-image: url(" ");
+    background-color: #b0e0e6;
+}
+body {
+	width: 500px;
+	margin: 50;
+	padding: 100px !important;
+}
+.wrap {
+	perspective: 800px;
+	perspective-origin: 80% 100px;
+	-webkit-perspective: 800px;
+	-webkit-perspective-origin: 50% 100px;
+	display: inline-block;
+	white-space: nowrap;
+}
+.cube {
+	position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+.cube img {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.back {
+	transform: translateZ(-99px) rotateY(180deg);
+	-webkit-transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+	transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+	-webkit-transform: rotateY(-270deg) translateX(100px);
+	-webkit-transform-origin: top right;
+}
+.left {
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
+	-webkit-transform: rotateY(270deg) translateX(-100px);
+	-webkit-transform-origin: center left;
+}
+.top {
+	transform: rotateX(-90deg) translateY(-100px);
+	transform-origin: top center;
+	-webkit-transform: rotateX(-90deg) translateY(-100px);
+	-webkit-transform-origin: top center;
+}
+.bottom {
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+	-webkit-transform: rotateX(90deg) translateY(100px);
+	-webkit-transform-origin: bottom center;
+}
+
+.shadow {
+	transform: rotateX(90deg) translateZ(-35px) translateY(100px);
+	transform-origin: bottom center;
+	-webkit-transform: rotateX(90deg);
+	-webkit-transform-origin: bottom center;
+}
+.front {
+	transform: translateZ(96px);
+	-webkit-transform: translateZ(100px);
+}
+
+@keyframes spin {
+	from { transform: rotateX(-10deg) rotateY(0); }
+	to { transform: rotateX(-10deg) rotateY(360deg); }
+}
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotateX(-10deg) rotateY(0); }
+	to { -webkit-transform: rotateX(-10deg) rotateY(360deg); }
+}
+
+.cube {
+	animation: spin 25s infinite linear;
+	-webkit-animation: spin 25s infinite linear;
+}
