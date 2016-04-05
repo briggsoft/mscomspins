@@ -1,0 +1,88 @@
+
+.wrap {
+	perspective: 800px;
+	perspective-origin: 80% 100px;
+	-webkit-perspective: 800px;
+	-webkit-perspective-origin: 50% 100px;
+	display: inline-block;
+	white-space: nowrap;
+}
+.tower {
+	position: fixed;
+  right: -500px;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+.tower img{
+	position: fixed;
+	/*! margin: 0px !important; */
+	/*! padding: 0px !important; */
+}
+.back {
+	width: 100px;
+	height: 200px;
+	transform: translateZ(-99px) rotateY(180deg);
+	-webkit-transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+	height: 200px;
+	width: 200px;
+	transform: rotateY(-270deg) translateX(0px);
+	transform-origin: center;
+	-webkit-transform: rotateY(-270deg) translateX(100px);
+	-webkit-transform-origin: top right;
+}
+.left {
+	width: 200px;
+	height: 200px;
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
+	-webkit-transform: rotateY(270zdeg) translateX(0px);
+	-webkit-transform-origin: center left;
+}
+.top {
+	height: 200px;
+	width: 100px;
+	transform: rotateX(-90deg) translateY(-100px);
+	transform-origin: top center;
+	-webkit-transform: rotateX(-90deg) translateY(-100px);
+	-webkit-transform-origin: top center;
+}
+.bottom {
+	width: 100px;
+	height: 200px;
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+	-webkit-transform: rotateX(90deg) translateY(100px);
+	-webkit-transform-origin: bottom center;
+}
+
+.shadow {
+	width: 100px;
+	height: 200px;
+	transform: rotateX(90deg) translateZ(-35px) translateY(100px);
+	transform-origin: bottom center;
+	-webkit-transform: rotateX(90deg);
+	-webkit-transform-origin: bottom center;
+}
+.front {
+	width: 100px;
+	height: 200px;
+	transform: translateZ(100px);
+	-webkit-transform: translateZ(100px);
+}
+
+@keyframes spin1 {
+	from { transform: rotateX(-10deg) rotateY(0); }
+	to { transform: rotateX(-10deg) rotateY(360deg); }
+}
+@-webkit-keyframes spin1 {
+	from { -webkit-transform: rotateX(-10deg) rotateY(0); }
+	to { -webkit-transform: rotateX(-10deg) rotateY(360deg); }
+}
+
+.tower {
+	height: 100px;
+	animation: spin1 25s infinite linear;
+	-webkit-animation: spin1 25s infinite linear;
+}
