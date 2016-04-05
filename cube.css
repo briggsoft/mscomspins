@@ -1,13 +1,10 @@
 body  {
     background-image: url(" ");
     background-color: #b0e0e6;
-}
-body {
-	width: 500px;
-	margin: 50;
 	padding: 100px !important;
 }
-.wrap {
+
+.wrap1 {
 	perspective: 800px;
 	perspective-origin: 80% 100px;
 	-webkit-perspective: 800px;
@@ -15,55 +12,55 @@ body {
 	display: inline-block;
 	white-space: nowrap;
 }
-.cube {
+.com {
 	position: relative;
 	width: 200px;
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
-.cube img {
+.com img {
 	position: absolute;
 	width: 200px;
 	height: 200px;
 	margin: 0px !important;
 	padding: 0px !important;
 }
-.back {
+.back1 {
 	transform: translateZ(-99px) rotateY(180deg);
 	-webkit-transform: translateZ(-100px) rotateY(180deg);
 }
-.right {
+.right1 {
 	transform: rotateY(-270deg) translateX(100px);
 	transform-origin: top right;
 	-webkit-transform: rotateY(-270deg) translateX(100px);
 	-webkit-transform-origin: top right;
 }
-.left {
+.left1 {
 	transform: rotateY(270deg) translateX(-100px);
 	transform-origin: center left;
 	-webkit-transform: rotateY(270deg) translateX(-100px);
 	-webkit-transform-origin: center left;
 }
-.top {
+.top1 {
 	transform: rotateX(-90deg) translateY(-100px);
 	transform-origin: top center;
 	-webkit-transform: rotateX(-90deg) translateY(-100px);
 	-webkit-transform-origin: top center;
 }
-.bottom {
+.bottom1 {
 	transform: rotateX(90deg) translateY(100px);
 	transform-origin: bottom center;
 	-webkit-transform: rotateX(90deg) translateY(100px);
 	-webkit-transform-origin: bottom center;
 }
 
-.shadow {
+.shadow1 {
 	transform: rotateX(90deg) translateZ(-35px) translateY(100px);
 	transform-origin: bottom center;
 	-webkit-transform: rotateX(90deg);
 	-webkit-transform-origin: bottom center;
 }
-.front {
+.front1 {
 	transform: translateZ(96px);
 	-webkit-transform: translateZ(100px);
 }
@@ -77,7 +74,7 @@ body {
 	to { -webkit-transform: rotateX(-10deg) rotateY(360deg); }
 }
 
-.cube {
+.com {
 	animation: spin 25s infinite linear;
 	-webkit-animation: spin 25s infinite linear;
 }
